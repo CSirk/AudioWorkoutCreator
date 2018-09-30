@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AudioWorkoutCreator
 {
-    public partial class Form1 : Form
+    public partial class AudioWorkoutCreator : Form
     {
-        public Form1()
+        public AudioWorkoutCreator()
         {
             InitializeComponent();
         }
