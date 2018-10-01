@@ -58,7 +58,7 @@ namespace AudioWorkoutCreator
                     AppendBreakToPrompt(speechPrompt, 0, (exercise.SetTime / 2));
                     speechPrompt.AppendText("Half set time.");
                     AppendBreakToPrompt(speechPrompt, 0, (exercise.SetTime / 2));
-                    speechPrompt.AppendText($"Good set! Time to rest. You will have {exercise.RestTime} to rest.");
+                    speechPrompt.AppendText($"Good set! Time to rest. You will have {exercise.RestTime} seconds to rest.");
                     AppendBreakToPrompt(speechPrompt, 0, (exercise.RestTime / 2));
                     speechPrompt.AppendText("Half rest time.");
                     AppendBreakToPrompt(speechPrompt, 0, (exercise.RestTime / 2));
