@@ -45,6 +45,8 @@
             this.SelectSaveLocationButton = new System.Windows.Forms.Button();
             this.SaveLocationTextBox = new System.Windows.Forms.TextBox();
             this.SaveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.label7 = new System.Windows.Forms.Label();
+            this.VoiceSelectListBox = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.SetTimeNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RestTimeNumeric)).BeginInit();
             this.SuspendLayout();
@@ -105,13 +107,16 @@
             // 
             // AddToWorkoutButton
             // 
+            this.AddToWorkoutButton.BackColor = System.Drawing.Color.Black;
+            this.AddToWorkoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddToWorkoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddToWorkoutButton.ForeColor = System.Drawing.Color.White;
             this.AddToWorkoutButton.Location = new System.Drawing.Point(8, 134);
             this.AddToWorkoutButton.Name = "AddToWorkoutButton";
             this.AddToWorkoutButton.Size = new System.Drawing.Size(291, 49);
             this.AddToWorkoutButton.TabIndex = 5;
             this.AddToWorkoutButton.Text = "Add To Workout";
-            this.AddToWorkoutButton.UseVisualStyleBackColor = true;
+            this.AddToWorkoutButton.UseVisualStyleBackColor = false;
             this.AddToWorkoutButton.Click += new System.EventHandler(this.AddToWorkoutButton_Click);
             // 
             // ExerciseListBox
@@ -121,18 +126,21 @@
             this.ExerciseListBox.ItemHeight = 20;
             this.ExerciseListBox.Location = new System.Drawing.Point(305, 36);
             this.ExerciseListBox.Name = "ExerciseListBox";
-            this.ExerciseListBox.Size = new System.Drawing.Size(471, 384);
+            this.ExerciseListBox.Size = new System.Drawing.Size(471, 464);
             this.ExerciseListBox.TabIndex = 11;
             // 
             // SaveAsAudioButton
             // 
+            this.SaveAsAudioButton.BackColor = System.Drawing.Color.Black;
+            this.SaveAsAudioButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SaveAsAudioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveAsAudioButton.Location = new System.Drawing.Point(8, 370);
+            this.SaveAsAudioButton.ForeColor = System.Drawing.Color.White;
+            this.SaveAsAudioButton.Location = new System.Drawing.Point(8, 447);
             this.SaveAsAudioButton.Name = "SaveAsAudioButton";
             this.SaveAsAudioButton.Size = new System.Drawing.Size(291, 50);
             this.SaveAsAudioButton.TabIndex = 7;
             this.SaveAsAudioButton.Text = "Save As Audio";
-            this.SaveAsAudioButton.UseVisualStyleBackColor = true;
+            this.SaveAsAudioButton.UseVisualStyleBackColor = false;
             this.SaveAsAudioButton.Visible = false;
             this.SaveAsAudioButton.Click += new System.EventHandler(this.SaveAsAudioButton_Click);
             // 
@@ -204,30 +212,56 @@
             // 
             // SelectSaveLocationButton
             // 
+            this.SelectSaveLocationButton.BackColor = System.Drawing.Color.Black;
+            this.SelectSaveLocationButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SelectSaveLocationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SelectSaveLocationButton.Location = new System.Drawing.Point(8, 286);
+            this.SelectSaveLocationButton.ForeColor = System.Drawing.Color.White;
+            this.SelectSaveLocationButton.Location = new System.Drawing.Point(8, 365);
             this.SelectSaveLocationButton.Name = "SelectSaveLocationButton";
             this.SelectSaveLocationButton.Size = new System.Drawing.Size(198, 36);
             this.SelectSaveLocationButton.TabIndex = 6;
             this.SelectSaveLocationButton.Text = "Select Save Location";
-            this.SelectSaveLocationButton.UseVisualStyleBackColor = true;
+            this.SelectSaveLocationButton.UseVisualStyleBackColor = false;
             this.SelectSaveLocationButton.Click += new System.EventHandler(this.SelectSaveLocationButton_Click);
             // 
             // SaveLocationTextBox
             // 
             this.SaveLocationTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveLocationTextBox.Location = new System.Drawing.Point(8, 241);
+            this.SaveLocationTextBox.Location = new System.Drawing.Point(8, 337);
             this.SaveLocationTextBox.Name = "SaveLocationTextBox";
             this.SaveLocationTextBox.ReadOnly = true;
             this.SaveLocationTextBox.Size = new System.Drawing.Size(291, 22);
             this.SaveLocationTextBox.TabIndex = 19;
             this.SaveLocationTextBox.Text = "NONE SELECTED";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(4, 209);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(227, 24);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Selected Voice For Audio";
+            // 
+            // VoiceSelectListBox
+            // 
+            this.VoiceSelectListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VoiceSelectListBox.FormattingEnabled = true;
+            this.VoiceSelectListBox.ItemHeight = 20;
+            this.VoiceSelectListBox.Location = new System.Drawing.Point(8, 236);
+            this.VoiceSelectListBox.Name = "VoiceSelectListBox";
+            this.VoiceSelectListBox.Size = new System.Drawing.Size(223, 64);
+            this.VoiceSelectListBox.TabIndex = 21;
+            // 
             // AudioWorkoutCreator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(786, 434);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(786, 509);
+            this.Controls.Add(this.VoiceSelectListBox);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.SaveLocationTextBox);
             this.Controls.Add(this.SelectSaveLocationButton);
             this.Controls.Add(this.label6);
@@ -272,6 +306,8 @@
         private System.Windows.Forms.Button SelectSaveLocationButton;
         private System.Windows.Forms.TextBox SaveLocationTextBox;
         private System.Windows.Forms.SaveFileDialog SaveFileDialog;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ListBox VoiceSelectListBox;
     }
 }
 

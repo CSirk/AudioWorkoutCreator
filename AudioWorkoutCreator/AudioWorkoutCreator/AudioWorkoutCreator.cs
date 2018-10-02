@@ -15,6 +15,12 @@ namespace AudioWorkoutCreator
         public AudioWorkoutCreator()
         {
             InitializeComponent();
+            var synthesizer = new SpeechSynthesizer();
+            foreach(var voice in synthesizer.GetInstalledVoices())
+            {
+                VoiceSelectListBox.Items.Add(voice.VoiceInfo.Name);
+                VoiceSelectListBox.SelectedIndex = 0;
+            }
         }
 
         private void AddToWorkoutButton_Click(object sender, EventArgs e)
@@ -67,9 +73,26 @@ namespace AudioWorkoutCreator
 
                 speechPrompt.AppendText("Awesome workout! You are a step closer to achieving your goals! See you next time!");
 
-                SpeechAction.ConvertSpeechSynthPromptToMp3File(speechPrompt, _savePath);
+                SpeechAction.ConvertSpeechSynthPromptToMp3File(speechPrompt, _savePath, VoiceSelectListBox.SelectedItem.ToString());
             }
             
+        }
+
+        private void SelectSaveLocationButton_Click(object sender, EventArgs e)
+        {
+            var saveFileName = $"Workout Assistant - {DateTime.Now.ToString("yyyy-MM-dd hh_mm_ss_tt")}";
+            SaveFileDialog.FileName = saveFileName;
+            SaveFileDialog.DefaultExt = "mp3";
+            SaveFileDialog.AddExtension = true;
+            SaveFileDialog.Filter = "mp3 (*.mp3)|*.mp3";
+
+            DialogResult result = SaveFileDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                SaveAsAudioButton.Visible = true;
+                SaveLocationTextBox.Text = SaveFileDialog.FileName;
+                _savePath = SaveFileDialog.FileName;
+            }
         }
 
         private bool ExerciseBoxesFilled()
@@ -93,18 +116,6 @@ namespace AudioWorkoutCreator
             return prompt;
         }
 
-        private void SelectSaveLocationButton_Click(object sender, EventArgs e)
-        {
-            var saveFileName = $"Workout Assistant - {DateTime.Now.ToString("yyyy-MM-dd hh_mm_ss_tt")}.mp3";
-            SaveFileDialog.FileName = saveFileName;
-            
-            DialogResult result = SaveFileDialog.ShowDialog();
-            if(result == DialogResult.OK)
-            {
-                SaveAsAudioButton.Visible = true;
-                SaveLocationTextBox.Text = SaveFileDialog.FileName;
-                _savePath = SaveFileDialog.FileName;
-            }
-        }
+        
     }
 }
