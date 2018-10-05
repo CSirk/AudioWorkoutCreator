@@ -66,44 +66,46 @@
             this.WeightTextBox.Name = "WeightTextBox";
             this.WeightTextBox.Size = new System.Drawing.Size(95, 31);
             this.WeightTextBox.TabIndex = 2;
+            this.WeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.WeightTextBox_KeyPress);
             // 
             // RepsTextBox
             // 
             this.RepsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RepsTextBox.Location = new System.Drawing.Point(108, 97);
+            this.RepsTextBox.Location = new System.Drawing.Point(111, 97);
             this.RepsTextBox.Name = "RepsTextBox";
             this.RepsTextBox.Size = new System.Drawing.Size(95, 31);
             this.RepsTextBox.TabIndex = 3;
+            this.RepsTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RepsTextBox_KeyPress);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(4, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 24);
+            this.label1.Size = new System.Drawing.Size(115, 20);
             this.label1.TabIndex = 7;
             this.label1.Text = "Exercise Name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(4, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 24);
+            this.label2.Size = new System.Drawing.Size(85, 20);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Weight";
+            this.label2.Text = "Weight (lb)";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(104, 70);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(107, 70);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 24);
+            this.label3.Size = new System.Drawing.Size(73, 20);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Reps";
+            this.label3.Text = "Reps (lb)";
             // 
             // AddToWorkoutButton
             // 
@@ -124,7 +126,7 @@
             this.ExerciseListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExerciseListBox.FormattingEnabled = true;
             this.ExerciseListBox.ItemHeight = 20;
-            this.ExerciseListBox.Location = new System.Drawing.Point(305, 36);
+            this.ExerciseListBox.Location = new System.Drawing.Point(331, 33);
             this.ExerciseListBox.Name = "ExerciseListBox";
             this.ExerciseListBox.Size = new System.Drawing.Size(471, 464);
             this.ExerciseListBox.TabIndex = 11;
@@ -147,10 +149,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(301, 9);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(327, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 24);
+            this.label4.Size = new System.Drawing.Size(69, 20);
             this.label4.TabIndex = 13;
             this.label4.Text = "Workout";
             // 
@@ -162,7 +164,7 @@
             0,
             0,
             0});
-            this.SetTimeNumeric.Location = new System.Drawing.Point(210, 36);
+            this.SetTimeNumeric.Location = new System.Drawing.Point(214, 36);
             this.SetTimeNumeric.Name = "SetTimeNumeric";
             this.SetTimeNumeric.Size = new System.Drawing.Size(89, 31);
             this.SetTimeNumeric.TabIndex = 1;
@@ -180,7 +182,7 @@
             0,
             0,
             0});
-            this.RestTimeNumeric.Location = new System.Drawing.Point(210, 97);
+            this.RestTimeNumeric.Location = new System.Drawing.Point(214, 97);
             this.RestTimeNumeric.Name = "RestTimeNumeric";
             this.RestTimeNumeric.Size = new System.Drawing.Size(89, 31);
             this.RestTimeNumeric.TabIndex = 4;
@@ -193,22 +195,22 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(210, 70);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 24);
+            this.label5.Size = new System.Drawing.Size(120, 20);
             this.label5.TabIndex = 16;
-            this.label5.Text = "Rest Time";
+            this.label5.Text = "Rest Time (sec)";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(210, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 24);
+            this.label6.Size = new System.Drawing.Size(111, 20);
             this.label6.TabIndex = 17;
-            this.label6.Text = "Set Time";
+            this.label6.Text = "Set Time (sec)";
             // 
             // SelectSaveLocationButton
             // 
@@ -237,10 +239,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(4, 209);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(227, 24);
+            this.label7.Size = new System.Drawing.Size(189, 20);
             this.label7.TabIndex = 20;
             this.label7.Text = "Selected Voice For Audio";
             // 
@@ -259,7 +261,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(786, 509);
+            this.ClientSize = new System.Drawing.Size(813, 509);
             this.Controls.Add(this.VoiceSelectListBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.SaveLocationTextBox);

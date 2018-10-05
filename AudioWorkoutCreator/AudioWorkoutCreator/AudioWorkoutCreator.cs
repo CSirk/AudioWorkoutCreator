@@ -55,7 +55,7 @@ namespace AudioWorkoutCreator
 
                 foreach (var exercise in _workout)
                 {
-                    speechPrompt.AppendText($"Please get in position for exercise, {_workout[0].Name} for {_workout[0].Reps} reps at {_workout[0].Weight} pounds.");
+                    speechPrompt.AppendText($"Please get in position for exercise, {exercise.Name} for {exercise.Reps} reps at {exercise.Weight} pounds.");
                     AppendBreakToPrompt(speechPrompt, 0, 15);
                     speechPrompt.AppendText($"Time for  {exercise.Name} for {exercise.Reps} reps at {exercise.Weight} pounds.");
                     speechPrompt.AppendText($"You will have {exercise.SetTime} seconds to complete the set.");
@@ -121,6 +121,20 @@ namespace AudioWorkoutCreator
             return prompt;
         }
 
-        
+        private void WeightTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void RepsTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
