@@ -57,7 +57,7 @@ namespace AudioWorkoutCreator
                 {
                     speechPrompt.AppendText($"Please get in position for exercise, {exercise.Name} for {exercise.Reps} reps at {exercise.Weight} pounds.");
                     AppendBreakToPrompt(speechPrompt, 0, 15);
-                    speechPrompt.AppendText($"Time for  {exercise.Name} for {exercise.Reps} reps at {exercise.Weight} pounds.");
+                    speechPrompt.AppendText($"Time for  {exercise.Name} for {exercise.Reps} reps at {exercise.Weight} pounds. ");
                     speechPrompt.AppendText($"You will have {exercise.SetTime} seconds to complete the set.");
                     AppendBreakToPrompt(speechPrompt, 0, 5);
                     speechPrompt.AppendText($"Begin {exercise.Name}");
