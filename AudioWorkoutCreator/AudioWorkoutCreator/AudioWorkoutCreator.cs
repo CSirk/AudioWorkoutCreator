@@ -136,5 +136,27 @@ namespace AudioWorkoutCreator
                 e.Handled = true;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private bool ItemSelected()  //Added 20181013 JSirk
+        {
+            return ExerciseListBox.SelectedIndex >= -1; //bool checks for an exercise being selected
+        }
+
+        private void RemoveExerciseButton_Click(object sender, EventArgs e) //Added 20181013 JSirk
+        {
+            if (ExerciseListBoxPopulated() & ItemSelected())  //check for exercise population and selection
+            {
+                int selectIndex = ExerciseListBox.SelectedIndex;
+                ExerciseListBox.Items.RemoveAt(selectIndex);  //remove selection from list box
+                _workout.RemoveAt(selectIndex); //remove selection from list _workout
+            }
+            else { }
+            
+        }
     }
 }
