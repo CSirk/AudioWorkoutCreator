@@ -149,7 +149,7 @@ namespace AudioWorkoutCreator
 
         private void RemoveExerciseButton_Click(object sender, EventArgs e) //Added 20181013 JSirk
         {
-            if (ExerciseListBoxPopulated() & ItemSelected())  //check for exercise population and selection
+            if (ExerciseListBoxPopulated() && ItemSelected())  //check for exercise population and selection
             {
                 int selectIndex = ExerciseListBox.SelectedIndex;
                 ExerciseListBox.Items.RemoveAt(selectIndex);  //remove selection from list box
