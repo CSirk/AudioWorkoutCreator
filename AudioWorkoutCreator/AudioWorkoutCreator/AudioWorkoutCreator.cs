@@ -136,5 +136,20 @@ namespace AudioWorkoutCreator
                 e.Handled = true;
             }
         }
+
+        private void ExerciseListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var item = ExerciseListBox.SelectedItem;
+            var exerciseIndex = ExerciseListBox.Items.IndexOf(item);
+            var exercise = _workout[exerciseIndex];
+            //MessageBox.Show(_workout[exerciseIndex].Name);
+            ExerciseNameTextBox.Text = exercise.Name;
+            RestTimeNumeric.Value = exercise.RestTime;
+            SetTimeNumeric.Value = exercise.SetTime;
+            WeightTextBox.Text = exercise.Weight;
+            RepsTextBox.Text = exercise.Reps;
+            
+            //WeightTextBox.Text = this._workout[ExerciseListBox.SelectedItem]
+        }
     }
 }

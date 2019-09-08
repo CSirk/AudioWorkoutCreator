@@ -130,6 +130,7 @@
             this.ExerciseListBox.Name = "ExerciseListBox";
             this.ExerciseListBox.Size = new System.Drawing.Size(471, 464);
             this.ExerciseListBox.TabIndex = 11;
+            this.ExerciseListBox.SelectedIndexChanged += new System.EventHandler(this.ExerciseListBox_SelectedIndexChanged);
             // 
             // SaveAsAudioButton
             // 
@@ -165,6 +166,11 @@
             0,
             0});
             this.SetTimeNumeric.Location = new System.Drawing.Point(214, 36);
+            this.SetTimeNumeric.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
             this.SetTimeNumeric.Name = "SetTimeNumeric";
             this.SetTimeNumeric.Size = new System.Drawing.Size(89, 31);
             this.SetTimeNumeric.TabIndex = 1;
@@ -183,6 +189,11 @@
             0,
             0});
             this.RestTimeNumeric.Location = new System.Drawing.Point(214, 97);
+            this.RestTimeNumeric.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
             this.RestTimeNumeric.Name = "RestTimeNumeric";
             this.RestTimeNumeric.Size = new System.Drawing.Size(89, 31);
             this.RestTimeNumeric.TabIndex = 4;
